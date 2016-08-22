@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/ivCam"
+        android:onClick="clickCam"
+        android:background="@null"
+        android:src="@drawable/butt05_cam"
+        android:layout_above="@+id/ivHelp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/ivHelp"
+        android:onClick="clickHelp"
+        android:background="@null"
+        android:src="@drawable/butt05_help"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/ivDestroy"
+        android:background="@null"
+        android:src="@drawable/butt05_destroy"
+        android:layout_below="@+id/ivHelp"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCam"
+        android:text="Take a picture of\nthe breeding ground!"
+        android:textColor="#3F3F3F"
+        android:textSize="35dp"
+        android:layout_above="@+id/tvHelp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/ivCam" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHelp"
+        android:text="Are there any\npupae present?"
+        android:textColor="#3F3F3F"
+        android:textSize="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/ivHelp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDestroy"
+        android:text="Did you safely destroy the\nbreeding ground?"
+        android:textColor="#3F3F3F"
+        android:textSize="35dp"
+        android:layout_below="@+id/tvHelp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/ivDestroy" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHelp"
+        android:layout_alignLeft="@+id/tvHelp"
+        android:layout_alignStart="@+id/tvHelp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="20sp"
+            android:id="@+id/radioPoopY"
+            android:onClick="onRadioPoopClick" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="20sp"
+            android:id="@+id/radioPoopN"
+            android:onClick="onRadioPoopClick" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDestroy"
+        android:layout_alignLeft="@+id/tvDestroy"
+        android:layout_alignStart="@+id/tvDestroy"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textSize="20dp"
+            android:id="@+id/radioDestroY"
+            android:onClick="onRadioDestroClick" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="20dp"
+            android:id="@+id/radioDestroN"
+            android:onClick="onRadioDestroClick" />
+    </RadioGroup>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/butt01_go"
+        android:id="@+id/buttGo"
+        android:background="@null"
+        android:onClick="clickGo"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
